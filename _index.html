@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Animedley</title>
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="assets/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div><img id="illust" src="img/dummy.jpg" width="300" height="300"></div>
+        <div class="progress_bar"><progress id="progress" value="8" max="10"></progress></div>
+        <div class="title">
+            <p class="title"><span id="title">Choose me♡ダーリン</span></p>
+        </div>
+        <div class="main_info">
+            <div class="st">
+                <p class="main_text"><span class="set">feat</span></p>
+                <p class="main_text"><span class="set">artist</span></p>
+                <p class="main_text"><span class="set">release</span></p>
+                <p class="main_text"><span class="set">genre</span></p>
+            </div>
+            <div class="ot">
+                <div class="feat" id="Sc">
+                    <p class="main_text"><span id="feat">真田雪村真田雪村真田雪村真田雪村真田雪村真田雪村真田雪村真田雪村真田雪村真田雪村真田雪村</span></p>
+                </div>
+                <p class="main_text"><span id="artist">真田雪村</span></p>
+                <p class="main_text"><span id="release">2014</span></p>
+                <p class="main_text"><span id="genre">アニメ</span></p>
+            </div>
+        </div>
+        <script>
+            $(function(){
+                $("#Sc").kinetic({
+                    filterTarget: function(target, e){
+                        if (!/down|start/.test(e.type)){
+                            return !(/area|a|input/i.test(target.tagName));
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
